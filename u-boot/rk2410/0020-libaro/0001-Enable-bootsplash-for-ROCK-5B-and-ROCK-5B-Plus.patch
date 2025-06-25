@@ -1,3 +1,22 @@
+From 6ffc6331e86583b4ecea93df0b2eb06ca7812f89 Mon Sep 17 00:00:00 2001
+From: "neemspees (Kim Bouchouaram)" <kim@libaro.be>
+Date: Wed, 25 Jun 2025 18:18:08 +0200
+Subject: [PATCH] Enable bootsplash for ROCK 5B and ROCK 5B Plus
+
+Add splash screen configuration options to enable U-Boot bootsplash
+support for both ROCK 5B and ROCK 5B Plus boards.
+
+This enables:
+- CONFIG_SPLASH_SCREEN=y
+- CONFIG_SPLASH_SCREEN_ALIGN=y
+- CONFIG_VIDEO_BMP_RLE8=y
+- CONFIG_CMD_BMP=y
+- CONFIG_CMD_SPLASHIMAGE=y
+---
+ configs/rock-5b-plus-rk3588_defconfig | 5 +++++
+ configs/rock-5b-rk3588_defconfig      | 5 +++++
+ 2 files changed, 10 insertions(+)
+
 diff --git a/configs/rock-5b-plus-rk3588_defconfig b/configs/rock-5b-plus-rk3588_defconfig
 index c657259d7c4..9d94a41668b 100644
 --- a/configs/rock-5b-plus-rk3588_defconfig
@@ -24,3 +43,6 @@ index 6832279aad6..056f33b5df6 100644
 +CONFIG_VIDEO_BMP_RLE8=y
 +CONFIG_CMD_BMP=y
 +CONFIG_CMD_SPLASHIMAGE=y
+-- 
+2.49.0
+
